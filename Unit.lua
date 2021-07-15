@@ -22,6 +22,7 @@ function Unit:new(blizzardUnitInfo)
         name = blizzardUnitInfo.name,
         level = blizzardUnitInfo.level,
         maxHealth = blizzardUnitInfo.maxHealth,
+		initalHealth = blizzardUnitInfo.health,
         currentHealth = blizzardUnitInfo.health,
         startHealth = blizzardUnitInfo.health,
         attack = blizzardUnitInfo.attack,
@@ -40,7 +41,9 @@ function Unit:new(blizzardUnitInfo)
 
     self.__index = self
     setmetatable(newObj, self)
-    newObj:setSpells(blizzardUnitInfo.autoCombatSpells)
+    if blizzardUnitInfo.autoCombatSpells and next(blizzardUnitInfo.autoCombatSpells) ~= nil then
+        newObj:setSpells(blizzardUnitInfo.autoCombatSpells)
+    end
 
 
     return newObj
