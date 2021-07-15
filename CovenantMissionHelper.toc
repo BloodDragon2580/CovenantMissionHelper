@@ -1,0 +1,23 @@
+## Interface: 90100
+## Title: Covenant Mission Helper
+## Title-zhCN: Covenant Mission Helper 冒险任务助手
+## Author: Kreolix
+## Version: 3.2.0
+## RequiredDep: Blizzard_GarrisonTemplates
+## SavedVariables: CMH_DB
+
+Init.lua
+locales.xml
+
+DataTables.lua
+CovenantMissionHelper.lua
+Board.lua
+EventCollector.lua
+Spell.lua
+TargetManager.lua
+Unit.lua
+MetaBoard.lua
+UI.xml
+UI.lua
+MissionHelperFrame.lua
+Checker.lua
