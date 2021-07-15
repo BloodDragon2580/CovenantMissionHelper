@@ -75,13 +75,15 @@ function MissionHelper:findBestDisposition()
     local metaBoard = CMH.MetaBoard:new(missionPage, false)
 
     MissionHelper:clearBoard(missionPage)
-    MissionHelperFrame.board = metaBoard:findBestDisposition()
-
-    for _, unit in pairs(MissionHelperFrame.board.units) do
-        if unit.boardIndex < 5 then
-            local followerInfo = C_Garrison.GetFollowerInfo(unit.followerGUID)
-            followerInfo.autoCombatSpells = C_Garrison.GetFollowerAutoCombatSpells(unit.followerGUID, followerInfo.level);
-            CovenantMissionFrame:AssignFollowerToMission(missionPage.Board:GetFrameByBoardIndex(unit.boardIndex), followerInfo)
+    local bestBoard = metaBoard:findBestDisposition();
+    if bestBoard ~= nil then
+        MissionHelperFrame.board = bestBoard
+        for _, unit in pairs(MissionHelperFrame.board.units) do
+            if unit.boardIndex < 5 then
+                local followerInfo = C_Garrison.GetFollowerInfo(unit.followerGUID)
+                followerInfo.autoCombatSpells = C_Garrison.GetFollowerAutoCombatSpells(unit.followerGUID, followerInfo.level);
+                CovenantMissionFrame:AssignFollowerToMission(missionPage.Board:GetFrameByBoardIndex(unit.boardIndex), followerInfo)
+            end
         end
     end
 end
