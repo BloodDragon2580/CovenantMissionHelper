@@ -1,8 +1,7 @@
 ## Interface: 90100
 ## Title: Covenant Mission Helper
-## Title-zhCN: Covenant Mission Helper 冒险任务助手
 ## Author: Kreolix
-## Version: 3.2.0
+## Version: 3.3
 ## RequiredDep: Blizzard_GarrisonTemplates
 ## SavedVariables: CMH_DB
 
