@@ -17,7 +17,7 @@ Known issues:
 
 Addon may contain other bugs, so I recommend to sent you troops if their remaining HP > 10% of total.
 
-![1](https://github.com/BloodDragon2580/CovenantMissionHelper/blob/master/CovenantMissionHelper.png)
+![1](https://github.com/BloodDragon2580/CovenantMissionHelper/blob/main/CovenantMissionHelper.png)
 
 This is an in progress 9.1 update (attempt) for the famous World of Warcraft addon called Covenant Mission Helper. 
 
