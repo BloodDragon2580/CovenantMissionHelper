@@ -2,6 +2,7 @@ local CovenantMissionHelper, CMH = ...
 local hooksecurefunc = _G["hooksecurefunc"]
 local MissionHelper = MissionHelper
 local L = MissionHelper.L
+local CurrentTypeID = 1813
 
 local function registerHook()
     -- open/close mission
@@ -70,20 +71,18 @@ function MissionHelper:simulateFight(isCalcRandom)
     --]]
 end
 
-function MissionHelper:findBestDisposition()
+function MissionHelper:findBestDisposition(criteriaFunctionID)
     local missionPage = CovenantMissionFrame:GetMissionPage()
     local metaBoard = CMH.MetaBoard:new(missionPage, false)
 
     MissionHelper:clearBoard(missionPage)
-    local bestBoard = metaBoard:findBestDisposition();
-    if bestBoard ~= nil then
-        MissionHelperFrame.board = bestBoard
-        for _, unit in pairs(MissionHelperFrame.board.units) do
-            if unit.boardIndex < 5 then
-                local followerInfo = C_Garrison.GetFollowerInfo(unit.followerGUID)
-                followerInfo.autoCombatSpells = C_Garrison.GetFollowerAutoCombatSpells(unit.followerGUID, followerInfo.level);
-                CovenantMissionFrame:AssignFollowerToMission(missionPage.Board:GetFrameByBoardIndex(unit.boardIndex), followerInfo)
-            end
+    MissionHelperFrame.board = metaBoard:findBestDisposition(criteriaFunctionID)
+
+    for _, unit in pairs(MissionHelperFrame.board.units) do
+        if unit.boardIndex < 5 then
+            local followerInfo = C_Garrison.GetFollowerInfo(unit.followerGUID)
+            followerInfo.autoCombatSpells = C_Garrison.GetFollowerAutoCombatSpells(unit.followerGUID, followerInfo.level);
+            CovenantMissionFrame:AssignFollowerToMission(missionPage.Board:GetFrameByBoardIndex(unit.boardIndex), followerInfo)
         end
     end
 end
@@ -177,7 +176,7 @@ function MissionHelper:addXPPerHour(followerTypeID)
     if type(self) ~= 'table' then return end
 
     for _, mission in pairs(self) do
-        if mission.rewards[1].followerXP then
+        if mission.costCurrencyTypesID == CurrentTypeID and mission.rewards[1] and mission.rewards[1].followerXP then
             mission.rewards[1].tooltip = mission.rewards[1].tooltip ..
                     '\n+' .. string.format("%3d", mission.rewards[1].followerXP / (mission.durationSeconds / 3600)) .. L['XP/hour']
         end

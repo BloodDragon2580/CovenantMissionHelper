@@ -21,6 +21,9 @@ L['WIN'] = '勝利'
 L['LOSE'] = '失敗'
 L['Enemy units'] = '敵方單位'
 L['TOTAL REMAINING HP'] = '總計剩餘生命值'
+-- TODO: translate
+L['Average HP'] = 'Average HP'
+L['Minimal HP'] = 'Minimal HP'
 
 --CovenantMissionHelper.lua
 L['Base XP'] = '基礎經驗值'
@@ -43,7 +46,7 @@ L["Additional damage dealt"] = "造成額外傷害"
 L["Additional receive damage"] = "受到額外傷害"
 
 --MissionHelperFrame.lua
-L['Duration'] = '持續時間'
+L['Duration'] = '花費時間'
 L['Offer time'] = '過期時間'
 
 --UI.lua
@@ -51,11 +54,17 @@ L["Simulate mission 100 times to find approximate success rate"] = "模擬100次
 L['Simulate'] = '戰鬥模擬'
 L["Change the order of your troops to minimize HP loss"] = "優化調整部隊的站位，可最大限度的減少生命值損失。"
 L["It shuffles only units on board and doesn't consider others"] = "該操作只考慮指揮台上的部隊，不考慮未上場部隊。"
+--TODO: translate
+L["Find the disposition with the maximum average left HP as a percentage"] = "Find the disposition with the maximum average left HP as a percentage"
+L["Find the disposition with the maximum of lowest left HP as a percentage"] = "Find the disposition with the maximum of lowest left HP as a percentage"
 L["Addon doesn't support "] = "如果部隊擁有隨機技能，"
 L['"Optimize" if units have random abilities'] = '則"最佳化"功能不可用'
 L['Optimize'] = '最佳化'
 L['Result'] = '冒險結果'
 L['Combat log'] = '冒險記錄'
+--TODO: translate
+L['Optimize by\navg. % HP'] = L['Optimize by\navg. % HP']
+L["Optimize by\nmin. % HP"] = L["Optimize by\nmin. % HP"]
 
 --Unit.lua
 L['Auto Attack'] = '自動攻擊'
