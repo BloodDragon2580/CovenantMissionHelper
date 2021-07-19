@@ -1,4 +1,4 @@
-if not(GetLocale() == "ruRU") then
+if not(GetLocale() == "deDE") then
   return
 end
 
@@ -15,7 +15,7 @@ L['RECEIVED'] = 'EMPFANGEN'
 L["Units have random abilities. Actual rest HP may not be the same as predicted"] = "Units have random abilities. Actual rest HP may not be the same as predicted"
 L["My units"] = "My units"
 L["TOTAL"] = "TOTAL"
-L['Add units on board'] = 'Add units on board'
+L['Add units on board'] = 'Einheiten hinzufügen'
 L['More than %s rounds. Winner is undefined'] = 'More than %s rounds. Winner is undefined'
 L['WIN'] = 'GEWINNEN'
 L['LOSE'] = 'VERLIEREN'
@@ -51,8 +51,8 @@ L['Offer time'] = 'Offer time'
 --UI.lua
 L["Simulate mission 100 times to find approximate success rate"] = "Simulate mission 100 times to find approximate success rate"
 L['Simulate'] = 'Simulate'
-L["Change the order of your troops to minimize HP loss"] = "Change the order of your troops to minimize HP loss"
-L["It shuffles only units on board and doesn't consider others"] = "It shuffles only units on board and doesn't consider others"
+L["Change the order of your troops to minimize HP loss"] = "Ändere die Reihenfolge deiner Truppen, um den HP-Verlust zu minimieren"
+L["It shuffles only units on board and doesn't consider others"] = "Es werden nur Einheiten gemischt auf dem Bord es wird nichts anderes berücksichtigt"
 L["Find the disposition with the maximum average left HP as a percentage"] = "Find the disposition with the maximum average left HP as a percentage"
 L["Find the disposition with the maximum of lowest left HP as a percentage"] = "Find the disposition with the maximum of lowest left HP as a percentage"
 L["Addon doesn't support "] = "Addon doesn't support"
@@ -60,10 +60,10 @@ L['"Optimize" if units have random abilities'] = '"Optimize" if units have rando
 L['Optimize'] = 'Optimieren'
 L['Optimize\nby avg. HP percent'] = 'Optimize\nby avg. HP percent '
 L['Optimize\nby min. HP percent'] = 'Optimize\nby min. HP percent '
-L['Optimize by\navg. % HP'] = L['Optimize by\navg. % HP']
-L["Optimize by\nmin. % HP"] = L["Optimize by\nmin. % HP"]
+L['Optimize by\navg. % HP'] = 'Optimize by\navg. % HP'
+L["Optimize by\nmin. % HP"] = "Optimize by\nmin. % HP"
 L['Result'] = 'Ergebnis'
-L['Combat log'] = 'Kampfprotokoll'
+L['Combat log'] = 'Kampf Log'
 
 --Unit.lua
 L['Auto Attack'] = 'Automatischer Angriff'
