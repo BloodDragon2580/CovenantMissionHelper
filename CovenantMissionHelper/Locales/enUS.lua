@@ -56,8 +56,8 @@ L['"Optimize" if units have random abilities'] = '"Optimize" if units have rando
 L['Optimize'] = 'Optimize'
 L['Optimize\nby avg. HP percent'] = 'Optimize\nby avg. HP percent '
 L['Optimize\nby min. HP percent'] = 'Optimize\nby min. HP percent '
-L['Optimize by\navg. % HP'] = L['Optimize by\navg. % HP']
-L["Optimize by\nmin. % HP"] = L["Optimize by\nmin. % HP"]
+L['Optimize by\navg. % HP'] = 'Optimize by\navg. % HP'
+L["Optimize by\nmin. % HP"] = "Optimize by\nmin. % HP"
 L['Result'] = 'Result'
 L['Combat log'] = 'Combat log'
 
