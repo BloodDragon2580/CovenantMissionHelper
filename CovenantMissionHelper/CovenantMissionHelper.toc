@@ -1,7 +1,7 @@
 ## Interface: 90200
 ## Title: Covenant Mission Helper
 ## Author: Kreolix
-## Version: 3.9
+## Version: 4.0
 ## RequiredDep: Blizzard_GarrisonTemplates
 ## SavedVariables: CMH_DB
 
