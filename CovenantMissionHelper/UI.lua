@@ -136,7 +136,7 @@ end
 
 local function createScrollBar(mainFrame, combatLogFrame)
     local frame_height = combatLogFrame:GetHeight() - 3*PADDING
-    local scrollBar = CreateFrame("Slider", nil, combatLogFrame, "ScrollBarBaseTemplate")
+    local scrollBar = CreateFrame("Slider", nil, combatLogFrame, "OribosScrollBar")
     combatLogFrame.CombatLogMessageFrame.ScrollBar = scrollBar
         scrollBar:SetPoint("TOPRIGHT", combatLogFrame, "TOPRIGHT", -SCROLL_BAR_WIDTH, -1.5*PADDING)
         scrollBar:SetSize(SCROLL_BAR_WIDTH, frame_height)

@@ -143,7 +143,7 @@
         </Layers>
 		<Scripts>
 			<OnLoad>
-				PanelTemplates_TabResize(self, 0, nil, 50, 100)
+				PanelTemplates_TabResize(self, 0, 125)
 				self.HighlightTexture:Hide()
 			</OnLoad>
 			<OnClick>
@@ -156,7 +156,7 @@
 				MissionHelperFrame_TabOnLeave(self)
 			</OnLeave>
 		</Scripts>
-		<ButtonText name="$parentText">
+		<ButtonText name="$parentText" parentKey="Text">
 			<Size>
 				<AbsDimension x="0" y="10"/>
 			</Size>
