@@ -1,7 +1,7 @@
-## Interface: 100100
+## Interface: 100105
 ## Title: Covenant Mission Helper
 ## Author: Kreolix
-## Version: 5.2
+## Version: 5.3
 ## RequiredDep: Blizzard_GarrisonTemplates
 ## SavedVariables: CMH_DB
 ## IconTexture: Interface\AddOns\CovenantMissionHelper\Media\Texture\logo
